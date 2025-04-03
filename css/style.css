@@ -41,6 +41,11 @@ main p {
   font: 16px/2 "arial", "돋음"
 }
 
+footer ul {
+  font-size: 100px;
+  color: aqua;
+}
+
 /* 
 랜더링 동작 방식
 - html 태그를 해석해서 DOM생성 (Document Object Model)
