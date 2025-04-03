@@ -1,0 +1,19 @@
+@import "reset.css";
+
+/*
+서식 관련 구문 
+font-weight: normal / bold;
+font-style: normal / italic;
+font-size: 14px / 1rem / 1vw / 1vh;
+line-height: 1.5 (1.3~ 1.5 많이 씀)
+font-family: 'arial';
+color: pink;
+
+시스템 폰트: 특정 OS에 기본적으로 내장된 폰트
+한글: "돋움", "굴림"
+영어: "arial", "san-serif", "verdana"
+
+대체폰트
+font-family 속성에 복수개 이상의 폰트를 적용
+첫번째 적용 불가 시, 다음 폰트 적용
+*/
