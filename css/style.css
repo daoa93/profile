@@ -1,5 +1,9 @@
 @import "reset.css";
 
+body {
+  padding: 100px;
+}
+
 /*
 서식 관련 구문 
 font-weight: normal / bold;
@@ -19,16 +23,33 @@ font-family 속성에 복수개 이상의 폰트를 적용
 */
 
 header h1 {
-  font-weight: normal;
-  font-style: italic;
-  font-size: 200px;
-  color: hotpink;
+  font: 600 40px/1 "orbitron";
+  margin-bottom: 40px;
+}
+
+header nav a {
+  font: 16px/1 "orbitron";
+  padding: 10px 50px;
 }
 
 main p {
-  font-weight: bold;
+  /* font-weight: bold;
   font-style: italic;
   font-size: 12px;
   line-height: 2;
-  font-family: "arial", "돋움";
+  font-family: "arial", "돋움"; */
+  font: 16px/2 "arial", "돋음"
 }
+
+/* 
+랜더링 동작 방식
+- html 태그를 해석해서 DOM생성 (Document Object Model)
+- css를 해석해서 CSSDOM 생성
+- 위의 객체가 생성되기 전까지는 화면렌더링 블록됨
+
+구글 웹폰트를 <link>방식으로 연결하는게 좋은 이유
+- DOM생성시 서버에서 폰트를 사전에 미리 다운로드
+- 많은 웹폰트 연결로 인해 화면 렌더링 지연 최소화 가능
+- layout shifting 방지 기능 (컨텐츠의 재구성으로 높이값이 어긋나 덜컹거리는 현상)
+- link 방식은 한번 다운받은 폰트의 캐싱처리로 인해 layout shifting 최소화
+*/
