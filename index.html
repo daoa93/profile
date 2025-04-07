@@ -6,10 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>실습 예제: 취업용 프로필 페이지 제작</title>
   <link rel="stylesheet" href="css/style.css">
+  <!-- import 방식 보다 링크 방식을 사용하는 이유 -->
   <script src="https://kit.fontawesome.com/8b0c4e54d6.js" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Orbitron:wght@400..900&display=swap"
+    rel="stylesheet">
 </head>
 
 <body>
@@ -83,7 +86,7 @@ html 컨텐츠를 보다 구조적으로 구분하기 위한 명칭이 붙어있
   <!-- div>h1>a[href='#']{logo}^ul>li*5>a[href='#']{menu} -->
   <div>
     <header>
-      <h1><a href="#" title="인트로 페이지로 이동">YU-JIN LEE</a></h1>
+      <h1><a href="#" title="인트로 페이지로 이동">YU JIN LEE</a></h1>
       <!-- ul>li*5>a[href=#]{menu} -->
       <nav>
         <a href="#">About me</a>
@@ -95,10 +98,9 @@ html 컨텐츠를 보다 구조적으로 구분하기 위한 명칭이 붙어있
     </header>
 
     <main>
-      <h1>이유진</h1>
-      <div>
+      <figure>
         <img src="img/picUser01.jpg" alt="이유진 프로필 이미지">
-      </div>
+      </figure>
       <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Doloremque possimus repellendus, debitis optio velit
         explicabo aspernatur architecto exercitationem est fugiat distinctio pariatur dolor ipsa sapiente, doloribus
         necessitatibus assumenda nostrum harum aut? Laborum rerum hic nemo iste fugit, voluptates culpa natus cupiditate
@@ -106,7 +108,7 @@ html 컨텐츠를 보다 구조적으로 구분하기 위한 명칭이 붙어있
         laborum, iure quia facere quod deserunt. Aperiam, voluptatum! Laboriosam, magnam doloremque ducimus minus
         nostrum velit, numquam unde quae ratione odio laudantium modi repellendus, quos dignissimos.</p>
 
-      <a href="#" title="이유진 작업물 페이지로 이동">작업물 보러가기</a>
+      <a href="#" title="이유진 작업물 페이지로 이동">My works</a>
     </main>
 
     <footer>
@@ -118,7 +120,6 @@ html 컨텐츠를 보다 구조적으로 구분하기 위한 명칭이 붙어있
       <p>2025 abc &copy; All rights reserved.</p>
     </footer>
   </div>
-
 </body>
 
 </html>
