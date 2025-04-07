@@ -3,7 +3,6 @@
 }
 
 html {
-  /* html의 폰트 크기 지정시 기본 rem단위 수정 가능 */
   font-size: 16px;
 }
 
@@ -12,10 +11,6 @@ html {
   padding: 0px;
   color: inherit;
   font-family: "Noto Sans KR";
-}
-
-a {
-  font-family: inherit;
 }
 
 ul,
@@ -35,5 +30,36 @@ img {
 
 body {
   padding: 100px;
-  background-color: grey;
+  background-color: gray;
+}
+
+/*
+효율적인 반응형웹(RWD) 작업을 위한 규칙 3가지
+1. 모바일 디바이스에서는 가로폭의 총합이 100% 작업(가로축에 픽셀 불가, 여백포함)
+2. 기존 데스크탑 대비 변경할 필요가 없는 코드는 미디어쿼리에 붙여넣기 할 필요 없음
+3. 
+*/
+
+/*
+미디어 쿼리(media query)
+-브라우저 폭을 구문해서 각 폭에 맞는 전용 스타일 적용
+-하나의 웹 문서를 브라우저 폭에 따른 기술을 적용가능하게 함
+
+반응형 웹(RWD: Reponsive Web Design)
+
+*/
+
+//브라우저 폭이 1200px까지 일떄
+//0~100px
+@media screen and (max-width: 1200px) {
+  body {
+    background-color: hotpink;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  body {
+    background-color: aqua;
+  }
+
 }
