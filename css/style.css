@@ -3,6 +3,15 @@
   --point-lch: lch(38.55% 34.6 118.46 / 0.4);
 }
 
+/*
+미디어쿼리 사용시 break point값을 일반 css변수에
+담아놓으면 문서가 렌더링될때 읽히기 때문에
+반응형 동작이 안됨
+
+--해결방법
+문서 렌더링전 미리 서버쪽에서 break point 수치값 설정되어야함
+scss 변수는 변수값이 렌더링 전 컴파일 시점에 읽히기 때문에 가능
+*/
 html {
   font-size: 16px;
 }
@@ -49,12 +58,12 @@ body {
 반응형 웹(RWD: Reponsive Web Design)
 
 */
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: var(--wid-tablet)) {
   body {
     background-color: hotpink;
   }
 }
-@media screen and (max-width: 680px) {
+@media screen and (max-width: var(--wid-mp)) {
   body {
     background-color: aqua;
   }
@@ -130,7 +139,7 @@ div footer p {
 
 @media screen and (max-width: 1200px) {
   div {
-    width: 80%;
+    width: 90%;
   }
   div header {
     justify-content: space-between;
