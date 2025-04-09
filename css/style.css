@@ -44,35 +44,6 @@ body {
   background-color: gray;
 }
 
-/*
-효율적인 반응형웹(RWD) 작업을 위한 규칙 3가지
-1. 모바일 디바이스에서는 가로폭의 총합이 100% 작업(가로축에 픽셀 불가, 여백포함)
-2. 기존 데스크탑 대비 변경할 필요가 없는 코드는 미디어쿼리에 붙여넣기 할 필요 없음
-3. 
-*/
-/*
-미디어 쿼리(media query)
--브라우저 폭을 구문해서 각 폭에 맞는 전용 스타일 적용
--하나의 웹 문서를 브라우저 폭에 따른 기술을 적용가능하게 함
-
-반응형 웹(RWD: Reponsive Web Design)
-
-*/
-@media screen and (max-width: var(--wid-tablet)) {
-  body {
-    background-color: hotpink;
-  }
-}
-@media screen and (max-width: var(--wid-mp)) {
-  body {
-    background-color: aqua;
-  }
-}
-body {
-  padding: 100px;
-  background-color: gray;
-}
-
 div {
   width: 980px;
   background-color: white;
@@ -91,8 +62,8 @@ div header {
 }
 div header h1 {
   font-family: "orbitron";
-  margin-bottom: 20px;
   font-size: 1.8rem;
+  text-align: center;
   color: var(--point-lch);
 }
 div header nav {
@@ -109,6 +80,7 @@ div header nav a:hover {
   transform: scale(1.3);
 }
 div header .btnMobileMenu {
+  font-size: 1.2rem;
   display: none;
 }
 div footer {
@@ -151,7 +123,6 @@ div footer p {
     display: none;
   }
   div header .btnMobileMenu {
-    font-size: 1.2rem;
     display: block;
   }
 }
@@ -165,6 +136,21 @@ div footer p {
   }
   div header h1 {
     font-size: 1.2rem;
+  }
+  div footer {
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+  div footer ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+  }
+  div footer p {
+    width: 100%;
+    text-align: center;
   }
 }
 main {
@@ -217,8 +203,23 @@ main article a:hover {
   background-color: var(--point-lch);
 }
 
-body {
-  border: 5px soild red;
+@media screen and (max-width: 1200px) {
+  main {
+    flex-wrap: wrap;
+  }
+  main figure {
+    width: 100%;
+    height: 50vw;
+  }
+  main article {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 680px) {
+  main figure {
+    width: 100%;
+    height: 70vw;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
