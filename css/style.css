@@ -1,17 +1,9 @@
 @charset "UTF-8";
 :root {
   --point-lch: lch(38.55% 34.6 118.46 / 0.4);
+  --point-lch-code: lch(92.06% 26.63 106.37 / 0.923);
 }
 
-/*
-미디어쿼리 사용시 break point값을 일반 css변수에
-담아놓으면 문서가 렌더링될때 읽히기 때문에
-반응형 동작이 안됨
-
---해결방법
-문서 렌더링전 미리 서버쪽에서 break point 수치값 설정되어야함
-scss 변수는 변수값이 렌더링 전 컴파일 시점에 읽히기 때문에 가능
-*/
 html {
   font-size: 16px;
 }
@@ -31,6 +23,8 @@ ol {
 
 a {
   text-decoration: none;
+  font-family: inherit;
+  font-family: inherit;
 }
 
 img {
@@ -64,6 +58,9 @@ body {
   font-family: "orbitron";
   font-size: 1.8rem;
   text-align: center;
+  color: black;
+}
+.wrap header h1a:hover {
   color: var(--point-lch);
 }
 .wrap header nav {
@@ -84,6 +81,7 @@ body {
   height: 20px;
   position: relative;
   cursor: pointer;
+  display: none;
 }
 .wrap header .btnToggle p {
   width: 100%;
@@ -95,13 +93,29 @@ body {
   transition: 0.5s;
 }
 .wrap header .btnToggle p:nth-of-type(1) {
-  transform: translateY(-10px);
+  transform: translateY(-10px) rotate(0deg);
+  transition-delay: 0.1s;
 }
 .wrap header .btnToggle p:nth-of-type(2) {
-  transform: translateY(0px);
+  transform: translateY(0px) translateX(0px);
+  opacity: 1;
 }
 .wrap header .btnToggle p:nth-of-type(3) {
-  transform: translateY(10px);
+  transform: translateY(10px) rotate(0deg);
+  transition-delay: 0.2s;
+}
+.wrap header .btnToggle.on p {
+  background: var(--point-lch);
+}
+.wrap header .btnToggle.on p:nth-of-type(1) {
+  transform: translateY(0px) rotate(225deg);
+}
+.wrap header .btnToggle.on p:nth-of-type(2) {
+  transform: translateY(0px) translateX(-30px);
+  opacity: 0;
+}
+.wrap header .btnToggle.on p:nth-of-type(3) {
+  transform: translateY(0px) rotate(-225deg);
 }
 .wrap footer {
   border-top: 1px solid black;
@@ -117,16 +131,31 @@ body {
   order: 2;
 }
 .wrap footer ul li {
-  color: var(--point-lch);
+  color: black;
   transition: 0.5s;
 }
 .wrap footer ul li:hover {
   transform: rotate(360deg) scale(0);
-  opacity: 0;
+  color: var(--point-lch);
 }
 .wrap footer p {
   font-size: 0.8rem;
   order: 1;
+}
+
+.mobileMenu {
+  width: 300px;
+  height: 100vh;
+  background: lch(var(--point-lch-code)/0.8);
+  position: absolute;
+  top: 0px;
+  left: -350px;
+  backdrop-filter: blur(10px);
+  box-shadow: 10px 0px 20px lch(0% 0 0deg / 0.2);
+  transition: 0.5s;
+}
+.mobileMenu.on {
+  left: 0px;
 }
 
 @media screen and (max-width: 1200px) {
@@ -142,7 +171,7 @@ body {
   .wrap header nav {
     display: none;
   }
-  .wrap header .btnMobileMenu {
+  .wrap header .btnToggle {
     display: block;
   }
 }
@@ -241,5 +270,16 @@ main article a:hover {
     height: 70vw;
   }
 }
+/*
+form
+-안쪽 input요소들의 정보값을 서버에 전달하기 위한 틀
+-method: 폼 정보값을 서버에 전달하는 방식 (GET,POST)
+-GET: name에 value값에 url을 통해서 전달하는 방식
+-POST: url에 출력되지 않고 보안상 중요한 정보값을 숨겨서 보내는 방식
+
+filedset: 개발로직상 필요한 태그가 아닌 웹접근성 측면의 태그
+input요소는 무조건 label과 for,id값을 활용해서 연동 (접근성 측면)
+input요소는 name과 value값이 같이 있어야됨
+*/
 
 /*# sourceMappingURL=style.css.map */

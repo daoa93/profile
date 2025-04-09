@@ -2,17 +2,10 @@
 
 :root {
   --point-lch: lch(38.55% 34.6 118.46 / 0.4);
+  --point-lch-code: lch(92.06% 26.63 106.37 / 0.923);
+  //--point-lch-code: 65% 65 350;
 }
 
-/*
-미디어쿼리 사용시 break point값을 일반 css변수에
-담아놓으면 문서가 렌더링될때 읽히기 때문에
-반응형 동작이 안됨
-
---해결방법
-문서 렌더링전 미리 서버쪽에서 break point 수치값 설정되어야함
-scss 변수는 변수값이 렌더링 전 컴파일 시점에 읽히기 때문에 가능
-*/
 html {
   font-size: 16px;
 }
@@ -20,7 +13,6 @@ html {
 * {
   margin: 0px;
   padding: 0px;
-  // padding값을 기존 블록요소 너비, 높이에 흡수 시킴
   box-sizing: border-box;
   color: inherit;
   font-family: "Noto Sans KR";
@@ -33,6 +25,8 @@ ol {
 
 a {
   text-decoration: none;
+  font-family: inherit;
+  font-family: inherit;
 }
 
 img {

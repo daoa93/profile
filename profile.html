@@ -6,20 +6,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>실습 예제: 취업용 프로필 페이지 제작</title>
   <link rel="stylesheet" href="css/style.css">
-  <!-- import 방식 보다 링크 방식을 사용하는 이유 -->
-  <script src="https://kit.fontawesome.com/8b0c4e54d6.js" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/1d8113f26b.js" crossorigin="anonymous"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Orbitron:wght@400..900&display=swap"
     rel="stylesheet">
+  <script defer src="js/common.js"></script>
 </head>
 
 <body>
   <div class="wrap">
     <header>
-      <h1><a href="index.html" title="인트로 페이지로 이동">YU JIN LEE</a></h1>
-      <!-- ul>li*5>a[href=#]{menu} -->
+      <h1><a href="index.html" title="인트로 페이지로 이동">YU JIN, LEE</a></h1>
+
       <nav>
         <a href="profile.html">About me</a>
         <a href="works.html">My works</a>
@@ -28,22 +28,25 @@
         <a href="login.html">Login</a>
       </nav>
 
-      <a href="#" class="btnMobileMenu">
-        <i class="fa fa-bars"></i>
-      </a>
+      <div class="btnToggle">
+        <p></p>
+        <p></p>
+        <p></p>
+      </div>
     </header>
+
     <main>
       <figure>
-        <img src="img/picUser01.jpg" alt="이유진 프로필 이미지">
+        <img src="img/picUser01.jpg" alt="이유진진 프로필 이미지" />
       </figure>
 
       <article>
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nesciunt totam vitae qui deserunt illo obcaecati
-          voluptas asperiores, vero iusto dolorem explicabo accusantium odit saepe voluptates?</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti id, itaque facilis recusandae tenetur,
+          tempora
+          odio dolorum nemo deleniti odit minus rerum sapiente natus delectus quos amet eaque. </p>
 
-        <a href="#" title="이유진 작업물 페이지로 이동">My works</a>
+        <a href="#" title="이유진 작업물 페이지로 이동">My Works</a>
       </article>
-
     </main>
 
     <footer>
@@ -55,6 +58,9 @@
       <p>2025 abc &copy; All rights reserved.</p>
     </footer>
   </div>
+
+  <aside class="mobileMenu"></aside>
+
 </body>
 
 </html>
