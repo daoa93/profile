@@ -1,6 +1,6 @@
 @use "variable";
 
-main {
+.profile {
   margin-bottom: 40px;
   display: flex;
   justify-content: space-between;
@@ -73,12 +73,10 @@ main {
   }
 }
 
-
 // m.p
 @media screen and (max-width: variable.$wid_mp) {
   main {
     figure {
-      width: 100%;
       height: 70vw;
     }
   }

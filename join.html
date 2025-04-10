@@ -12,7 +12,8 @@
   <link
     href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Orbitron:wght@400..900&display=swap"
     rel="stylesheet">
-  <script defer src="js/common.js"></script>
+  <script type="module" src="js/common.js"></script>
+  <script type="module" src="js/validation.js"></script>
 </head>
 
 <body>
@@ -35,31 +36,39 @@
       </div>
     </header>
 
-    <main>
+    <main class="join">
       <h1>Be Our Group</h1>
 
       <article>
-        <form method="get">
+        <form method="get" action="index.html">
           <fieldset>
             <h2>
               <label for="username">성명</label>
             </h2>
-            <input type="text" name="username" id="username">
+            <p>
+              <input type="text" name="username" id="username">
+            </p>
 
             <h2>
               <label for="pwd1">비밀번호</label>
             </h2>
-            <input type="password" name="pwd1" id="pwd1">
+            <p>
+              <input type="password" name="pwd1" id="pwd1">
+            </p>
 
             <h2>
               <label for="pwd2">비밀번호 확인</label>
             </h2>
-            <input type="password" name="pwd2" id="pwd2">
+            <p>
+              <input type="password" name="pwd2" id="pwd2">
+            </p>
 
             <h2>
               <label for="email">이메일주소</label>
             </h2>
-            <input type="text" name="email" id="email">
+            <p>
+              <input type="text" name="email" id="email">
+            </p>
 
             <h2>성별</h2>
             <p>
@@ -95,8 +104,8 @@
             <textarea name="comments" id="comments"></textarea>
 
             <div>
-              <input type="reset" value="작성 취소">
-              <input type="submit" value="가입 신청">
+              <input type="reset" value="작성 취소" class="btn">
+              <input type="submit" value="가입 신청" class="btn">
             </div>
           </fieldset>
         </form>

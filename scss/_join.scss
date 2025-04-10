@@ -1,11 +1,34 @@
-/*
-form
--안쪽 input요소들의 정보값을 서버에 전달하기 위한 틀
--method: 폼 정보값을 서버에 전달하는 방식 (GET,POST)
--GET: name에 value값에 url을 통해서 전달하는 방식
--POST: url에 출력되지 않고 보안상 중요한 정보값을 숨겨서 보내는 방식
+.join {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 
-filedset: 개발로직상 필요한 태그가 아닌 웹접근성 측면의 태그
-input요소는 무조건 label과 for,id값을 활용해서 연동 (접근성 측면)
-input요소는 name과 value값이 같이 있어야됨
-*/
+  h1 {
+    width: 30%;
+    text-align: right;
+  }
+
+  article {
+    width: 65%;
+    text-align: left;
+    margin-bottom: 50px;
+
+    h2 {
+      font-size: 1.2rem;
+    }
+
+    p {
+      margin-bottom: 20px;
+
+      input[type="text"],
+      input[type="password"],
+      select {
+        width: 60% !important;
+      }
+    }
+
+    textarea {
+      width: 60% !important;
+    }
+  }
+}
